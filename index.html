@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>个人文档中心</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -91,28 +92,84 @@
     <div class="sidebar">
         <h1>文档中心</h1>
         <ul>
-            <li><a href="#">STM32开发板</a></li>
-            <li><a href="#">FPGA开发板</a></li>
-            <li><a href="#">ESP32开发板</a></li>
-            <li><a href="#">K210开发板</a></li>
-            <li><a href="#">M4/M7开发板</a></li>
-            <li><a href="#">其他开发板</a></li>
+            <li><a href="#" onclick="loadMarkdown('stm32.md')">STM32开发板</a></li>
+            <li><a href="#" onclick="loadMarkdown('fpga.md')">FPGA开发板</a></li>
+            <li><a href="#" onclick="loadMarkdown('esp32.md')">ESP32开发板</a></li>
+            <li><a href="#" onclick="loadMarkdown('k210.md')">K210开发板</a></li>
+            <li><a href="#" onclick="loadMarkdown('m4m7.md')">M4/M7开发板</a></li>
+            <li><a href="#" onclick="loadMarkdown('other.md')">其他开发板</a></li>
         </ul>
     </div>
 
     <!-- 主内容区域 -->
     <div class="main-content">
-        <h2>STM32开发板下载中心</h2>
-        <p>在这里，你可以找到不同版本的 STM32 开发板资源，包括所有的硬件文档、固件库和工具。</p>
-        <ul>
-            <li>STM32F103系列开发板</li>
-            <li>STM32F4系列开发板</li>
-            <li>STM32H7系列开发板</li>
-            <li>STM32L4系列开发板</li>
-            <li>更多 STM32 开发板</li>
-        </ul>
-        <p>请点击左侧菜单中的链接，查看更多的开发板资源。</p>
+        <h2>欢迎使用文档中心</h2>
+        <div id="content">
+            <p>请选择左侧的项目，查看相关文档内容。</p>
+        </div>
     </div>
+
+    <script>
+        // 模拟从文件加载 Markdown 内容并解析
+        function loadMarkdown(filename) {
+            // 在此模拟加载文件内容，实际情况中可以通过 AJAX 加载文件
+            let markdownContent = '';
+
+            switch(filename) {
+                case 'stm32.md':
+                    markdownContent = `
+                    # STM32开发板
+                    这是关于STM32开发板的详细介绍。
+                    - STM32F103系列
+                    - STM32F4系列
+                    `;
+                    break;
+                case 'fpga.md':
+                    markdownContent = `
+                    # FPGA开发板
+                    这是关于FPGA开发板的详细介绍。
+                    - FPGA开发板A
+                    - FPGA开发板B
+                    `;
+                    break;
+                case 'esp32.md':
+                    markdownContent = `
+                    # ESP32开发板
+                    这是关于ESP32开发板的详细介绍。
+                    - ESP32模块A
+                    - ESP32模块B
+                    `;
+                    break;
+                case 'k210.md':
+                    markdownContent = `
+                    # K210开发板
+                    这是关于K210开发板的详细介绍。
+                    - K210模块
+                    `;
+                    break;
+                case 'm4m7.md':
+                    markdownContent = `
+                    # M4/M7开发板
+                    这是关于M4/M7开发板的详细介绍。
+                    - M4模块
+                    - M7模块
+                    `;
+                    break;
+                case 'other.md':
+                    markdownContent = `
+                    # 其他开发板
+                    这是其他开发板的详细介绍。
+                    `;
+                    break;
+                default:
+                    markdownContent = '<p>请选择一个有效的项目。</p>';
+            }
+
+            // 使用 marked.js 将 Markdown 转换为 HTML
+            const htmlContent = marked(markdownContent);
+            document.getElementById('content').innerHTML = htmlContent;
+        }
+    </script>
 
 </body>
 </html>
