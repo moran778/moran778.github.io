@@ -3,83 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>moran - 个人主页</title>
+    <title>个人文档中心</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            height: 100vh;
+            background-color: #f4f7fc;
         }
-        .container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            width: 100%;
-            text-align: center;
+        /* 侧边栏样式 */
+        .sidebar {
+            width: 250px;
+            background-color: #2C3E50;
+            color: white;
+            padding: 20px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
         }
-        h1 {
-            font-size: 2.5rem;
-            color: #4CAF50;
-            margin-bottom: 15px;
+        .sidebar h1 {
+            font-size: 1.6rem;
+            margin-bottom: 30px;
         }
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            line-height: 1.8;
-        }
-        ul {
-            list-style-type: none;
+        .sidebar ul {
+            list-style: none;
             padding: 0;
         }
-        li {
-            margin: 10px 0;
+        .sidebar li {
+            margin: 15px 0;
         }
-        a {
+        .sidebar a {
+            color: white;
             text-decoration: none;
-            color: #007BFF;
-            font-weight: bold;
+            font-size: 1.1rem;
             transition: color 0.3s;
         }
-        a:hover {
-            color: #0056b3;
+        .sidebar a:hover {
+            color: #18BC9C;
         }
-        footer {
-            margin-top: 20px;
-            font-size: 0.9rem;
-            color: #888;
+
+        /* 主内容区域样式 */
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            width: 100%;
+            background-color: white;
+            overflow-y: auto;
         }
-        footer a {
-            color: #888;
-            text-decoration: none;
-        }
-        footer a:hover {
+        .main-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
             color: #333;
+        }
+        .main-content p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* 响应式设计 */
+        @media screen and (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+            .main-content {
+                margin-left: 200px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .sidebar {
+                width: 100%;
+                position: relative;
+                height: auto;
+            }
+            .main-content {
+                margin-left: 0;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>大家好，我是moran</h1>
-        <p>这是我的个人主页，很高兴你来到这里！</p>
-        <p>你可以在以下的网站找到我：</p>
-        
+    <!-- 侧边栏 -->
+    <div class="sidebar">
+        <h1>文档中心</h1>
         <ul>
-            <li><a href="https://blog.csdn.net/weixin_45139984?type=blog">我的CSDN博客</a></li>
+            <li><a href="#">STM32开发板</a></li>
+            <li><a href="#">FPGA开发板</a></li>
+            <li><a href="#">ESP32开发板</a></li>
+            <li><a href="#">K210开发板</a></li>
+            <li><a href="#">M4/M7开发板</a></li>
+            <li><a href="#">其他开发板</a></li>
         </ul>
+    </div>
 
-        <footer>
-            <p>© 2025 moran - <a href="https://blog.csdn.net/weixin_45139984?type=blog">访问我的CSDN主页</a></p>
-        </footer>
+    <!-- 主内容区域 -->
+    <div class="main-content">
+        <h2>STM32开发板下载中心</h2>
+        <p>在这里，你可以找到不同版本的 STM32 开发板资源，包括所有的硬件文档、固件库和工具。</p>
+        <ul>
+            <li>STM32F103系列开发板</li>
+            <li>STM32F4系列开发板</li>
+            <li>STM32H7系列开发板</li>
+            <li>STM32L4系列开发板</li>
+            <li>更多 STM32 开发板</li>
+        </ul>
+        <p>请点击左侧菜单中的链接，查看更多的开发板资源。</p>
     </div>
 
 </body>
