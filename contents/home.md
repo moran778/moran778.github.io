@@ -1,9 +1,16 @@
-[![XX](https://img.shields.io/badge/XX-github-blue?logo=github)](https://github.com/XX)
+[![moran](https://img.shields.io/badge/moran-github-blue?logo=github)](https://github.com/moran778)
 
-我目前就读于西北工业大学软件学院
+#### 电话  
+<code>**15156891564**</code> 
 
-#### Email  
-<code>jy848732536@163.com</code>  
+#### 邮箱  
+<code>**jy848732536@163.com**</code>  
+
+#### 家庭地址
+安徽亳州
+
+#### CSDN个人博客
+[![moran](https://img.shields.io/badge/moran-csdn-red?logo=csdn)](https://blog.csdn.net/weixin_45139984?type=blog)
 
 #### 教育背景  
 **西北工业大学**，软件工程专业硕士（2022.9-至今）  
