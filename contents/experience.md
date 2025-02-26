@@ -1,21 +1,31 @@
-### **Software Engineer Intern**  
-**January 2025 – June 2025 | ByteDance**  
+#### 实习经历
 
-Worked on the development and optimization of large-scale recommendation systems, focusing on algorithm improvements and system efficiency enhancements. Contributed to real-time data processing pipelines and model optimization for personalized content delivery.
+**实习公司**：西安翔腾微电子科技有限公司  
+**实习岗位**：嵌入式软件开发工程师  
+**实习时间**：2023年11月-至今
 
-#### Key Contributions:  
-- Developed and optimized recommendation algorithms to enhance user engagement and content relevance.  
-- Designed and implemented real-time data processing workflows to improve model inference efficiency.  
-- Conducted A/B testing and performance analysis to refine recommendation strategies based on user behavior data.  
+**项目一：Zynq平台定制化Linux系统构建（MicroBlaze处理器）**  
+1. 使用Petalinux工具链完成定制化Linux系统的构建，包括内核配置、设备树定制及文件系统生成，确保系统能够适应特定硬件平台的需求。  
+2. 开发Linux系统下的LLDP（链路层发现）协议应用程序，确保DPU与交换机的通信。  
+3. 参与Linux系统下DPU网卡驱动的移植，确保系统在Zynq平台上的稳定运行。
 
----
+**项目二：FreeRTOS移植网卡驱动（MicroBlaze处理器）**  
+1. 将Linux下的DPU网卡驱动移植至FreeRTOS平台，并结合LWIP网络协议栈，确保网卡驱动在FreeRTOS环境中的稳定运行，系统启动时间5秒以内。  
+2. 设计并实现了FreeRTOS下的命令行接口（CLI），用于系统调试与命令执行，提升了系统的可操作性和调试效率。  
+3. 编写基于FreeRTOS的LLDP应用程序，作为链路层协议直接和网卡驱动进行交互，确保DPU与交换机的通信。  
+4. 优化了srec SPI bootloader引导程序，减少系统的内存开销，缩短了FreeRTOS的启动时间，提高了系统响应速度，由启动时间20秒缩短至5秒以内。
 
-### **软件工程师实习生**  
-**2025年1月 – 2025年6月 | 字节跳动**  
+**项目三：基于玄铁C908芯片的SoC外设驱动的移植**  
+1. 基于Xuantie Yocto构建定制化opensbi、U-Boot、Linux和rootfs，构建上层应用程序，并进行内核配置和设备树定制，确保SoC硬件平台兼容性。  
+2. 完成U-Boot下的UART和Flash驱动的移植工作。  
+3. 在Linux和FreeRTOS系统下实现了UART、GPIO、SPI-Flash的驱动移植。
 
-负责大规模推荐系统的开发与优化，专注于算法改进和系统效率提升。参与实时数据处理管道的构建，并优化模型推理流程，以提升个性化内容推荐效果。
+**项目难点**：  
+- 设计并实现一个高效的Linux系统定制化流程，以适应不同的硬件平台需求。  
+- 移植并优化网卡驱动，外设驱动，确保在Linux和FreeRTOS环境下的稳定运行和高性能。
 
-#### 主要贡献:  
-- 研发并优化推荐算法，提高用户互动率和内容相关性。  
-- 设计并实现实时数据处理流程，提升模型推理的计算效率。  
-- 进行A/B测试与性能分析，基于用户行为数据优化推荐策略。
+**实习收获**：  
+- 深入理解了嵌入式系统的开发流程，特别是在Zynq和玄铁C908平台上的软件开发。  
+- 掌握了Petalinux、Yocto Project、BitBake、Linux内核、设备树、网卡驱动、FreeRTOS、LWIP、命令行接口（CLI）、SPI引导、UART、GPIO、SPI_Flash等关键技术，提升了在复杂系统中进行性能优化和系统设计的能力。  
+- 提升了在大型项目中进行系统设计和问题解决的能力，通过项目实践，增强了对硬件适配和驱动开发的理解。  
+- 通过多个嵌入式系统项目的开发与优化，积累了丰富的硬件适配、操作系统移植、驱动开发以及性能调优经验，具备独立完成嵌入式Linux系统和RTOS平台开发的能力。
